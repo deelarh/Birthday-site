@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>For Elchapo Big Paps</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="confetti" aria-hidden="true"></canvas>
+  <div id="balloons" aria-hidden="true"></div>
+
+  <main>
+    <!-- 1. Confirm name -->
+    <section id="s-confirm" class="screen active">
+      <p class="small">Quick check before we start</p>
+      <h1>Is your name<br>Abubakar Sadiq Rufai?</h1>
+      <div class="row">
+        <button class="btn primary" id="yes">Yes, that's me</button>
+        <button class="btn ghost" id="no">No</button>
+      </div>
+    </section>
+
+    <!-- 1b. Wrong person -->
+    <section id="s-no" class="screen">
+      <h1>Oops!</h1>
+      <p class="lead">This message is only for<br><strong>Fadu's Big Papsss</strong>.</p>
+      <div class="row">
+        <button class="btn ghost" id="back">Go back</button>
+      </div>
+    </section>
+
+    <!-- 2. Birthday animation -->
+    <section id="s-bday" class="screen">
+      <h2 class="bday" id="bdayTitle" aria-label="Happy Birthday"></h2>
+      <p class="name-line" id="bdayName">Abubakar Sadiq Rufai</p>
+      <p class="aka" id="bdayAka">aka Elchapo Big Paps</p>
+      <div class="row">
+        <button class="btn primary hidden" id="toWheel">I have a surprise for you</button>
+      </div>
+    </section>
+
+    <!-- 3. Wheel -->
+    <section id="s-wheel" class="screen">
+      <h2>Spin the wheel</h2>
+      <p class="small">You get one spin only, so make it count.</p>
+      <div class="wheel-wrap">
+        <div class="pointer" aria-hidden="true"></div>
+        <div class="wheel" id="wheel">
+          <canvas id="wheelCanvas" width="720" height="720"></canvas>
+        </div>
+        <div class="hub" aria-hidden="true"></div>
+      </div>
+      <div class="row">
+        <button class="btn primary" id="spin">Spin</button>
+      </div>
+    </section>
+
+    <!-- 4. Result -->
+    <section id="s-result" class="screen">
+      <p class="small">Your prize</p>
+      <h1>Congratulations!</h1>
+      <p class="lead">You have gotten yourself a<br><strong>one day getaway with Fadu</strong><br>in the heart of Abuja.</p>
+      <div class="ticket">
+        <p>Come to <strong>Victor A Morris Street</strong> at your earliest convenience for your next adventure.</p>
+      </div>
+      <p class="screenshot">Take a screenshot of this page and send it to Fadu.</p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
